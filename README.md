@@ -1,54 +1,49 @@
-# 📚 ReRead – Online Book Exchange Platform
+<div align="center">
+
+# 📚 ReRead
+
+### Online Book Exchange Platform
+
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![XAMPP](https://img.shields.io/badge/XAMPP-FB7A24?style=flat&logo=xampp&logoColor=white)
+
+</div>
+
+---
 
 ## 📖 Overview
 
-ReRead is a full-stack web application developed as a mini project using PHP and MySQL. The platform allows users to exchange books, discover books shared by others, communicate through a community forum, and manage book requests. An admin panel is included to moderate users, approve book listings, and manage community activities.
+ReRead is a full-stack web application developed as a mini project using PHP and MySQL. Users can exchange books, discover books shared by others, communicate through a community forum and manage book requests. An admin panel lets administrators moderate users, approve book listings and manage community activity.
 
 ---
 
 ## ✨ Features
 
-### User Features
-- User Registration and Login
-- Browse and Search Books
-- View Book Details
-- Add Books to Wishlist
-- Shopping Cart Management
-- Community Discussion
-- Notifications
-- User Profile Management
-- Password Recovery
-- Email Verification
-
-### Admin Features
-- Admin Dashboard
-- Book Approval and Management
-- Community Moderation
-- User Management
-- Report Handling
-- Email Notifications
+| 👤 User | 🛡️ Admin |
+|---------|----------|
+| Registration and login | Admin dashboard |
+| Email verification and password recovery | Book approval and management |
+| Browse and search books | User management |
+| Book details page | Community moderation |
+| Wishlist and cart | Report handling |
+| Community discussion | Email notifications |
+| Notifications | |
+| Profile management | |
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend**
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap
-
-**Backend**
-- PHP
-
-**Database**
-- MySQL
-
-**Server**
-- XAMPP / Apache
-
-**Version Control**
-- Git & GitHub
+| Layer | Technology |
+|-------|------------|
+| Frontend | HTML5, CSS3, JavaScript, Bootstrap |
+| Backend | PHP |
+| Database | MySQL |
+| Server | XAMPP (Apache) |
+| Version Control | Git and GitHub |
 
 ---
 
@@ -56,12 +51,9 @@ ReRead is a full-stack web application developed as a mini project using PHP and
 
 ```
 ReRead/
-│
 ├── admin/
 │   ├── adminpage/
-│   ├── emailvalid/
-│   └── ...
-│
+│   └── emailvalid/
 ├── user/
 │   ├── login/
 │   ├── products/
@@ -70,7 +62,6 @@ ReRead/
 │   ├── wishlist/
 │   ├── notifications/
 │   └── profile/
-│
 ├── commonconnect.php
 ├── userinfo (27).sql
 └── README.md
@@ -80,115 +71,56 @@ ReRead/
 
 ## ⚙️ Installation
 
-### 1. Clone the Repository
-
+1. **Clone the repository**
 ```bash
-git clone https://github.com/meringeo1011-coder/miniproject.git
+   git clone https://github.com/meringeo1011-coder/miniproject.git
 ```
 
-### 2. Move the Project
+2. **Move the project** into your XAMPP `htdocs` folder, for example `C:\xampp\htdocs\miniproject`.
 
-Copy the project folder into your XAMPP `htdocs` directory.
+3. **Create the database** named `userinfo` in phpMyAdmin.
 
-Example:
+4. **Import** the `userinfo (27).sql` file into it.
 
-```
-C:\xampp\htdocs\miniproject
-```
-
-### 3. Create Database
-
-Create a database named:
-
-```
-userinfo
-```
-
-### 4. Import Database
-
-Import the SQL file:
-
-```
-userinfo (27).sql
-```
-
-using phpMyAdmin.
-
-### 5. Configure Database Connection
-
-Update `commonconnect.php` if necessary.
-
+5. **Check the database connection** in `commonconnect.php`:
 ```php
-$connection = new mysqli("localhost", "root", "", "userinfo");
+   $connection = new mysqli("localhost", "root", "", "userinfo");
 ```
 
 ---
 
 ## 🚀 Running the Project
 
-Start Apache and MySQL using XAMPP.
+Start **Apache** and **MySQL** in XAMPP, then open:
 
-Open your browser and visit:
+| Page | URL |
+|------|-----|
+| User login | `http://localhost/miniproject/user/login/login.php` |
+| User signup | `http://localhost/miniproject/user/login/signup/signup.php` |
+| Admin dashboard | `http://localhost/miniproject/admin/adminpage/adminhome.php` |
 
-### User Login
-
-```
-http://localhost/miniproject/user/login/login.php
-```
-
-### User Signup
-
-```
-http://localhost/miniproject/user/login/signup/signup.php
-```
-
-### Admin Dashboard
-
-```
-http://localhost/miniproject/admin/adminpage/adminhome.php
-```
+> 🔐 **Admin access:** an admin account is created by the imported database. Change its password after the first login. Credentials are not published in this repository.
 
 ---
-
-## 👤 Admin Credentials
-
-**Username**
-
-```
-rereadadmin1
-```
-
-**Password**
-
-```
-rereadadmin@123
-```
-
----
-
-
-
-
 
 ## 🔮 Future Enhancements
 
-- AI-based Book Recommendation System
-- Online Payment Integration
-- Mobile Responsive Design
-- Real-Time Notifications
-- Chat System
-- QR Code Based Book Exchange
+- [ ] AI-based book recommendations
+- [ ] Online payment integration
+- [ ] Mobile-responsive design
+- [ ] Real-time notifications
+- [ ] Chat system
+- [ ] QR-code-based book exchange
 
 ---
 
 ## 📄 License
 
-This project was developed for educational purposes as part of an Integrated MCA Mini Project.
+This project was developed for educational purposes as part of an Integrated MCA mini project.
 
 ---
 
 ## 👩‍💻 Author
 
 **Merin Geo**
-
-GitHub: https://github.com/meringeo1011-coder
+[GitHub](https://github.com/meringeo1011-coder) · [LinkedIn](https://linkedin.com/in/merin-geo-ba3533254)
